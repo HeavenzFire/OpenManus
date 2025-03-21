@@ -4,6 +4,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background: #34495e;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 500px;
+        }
+        h1 {
+            color: #1abc9c;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #2980b9;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        li:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        }
+        li:before {
+            content: '✓';
+            color: #f1c40f;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        p {
+            font-style: italic;
+            color: #bdc3c7;
+            margin-top: 20px;
+        }
+        .input-container {
+            margin-top: 25px;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #16a085;
+        }
+        .response {
+            margin-top: 20px;
+            padding: 15px;
+            background: #27ae60;
+            color: white;
+            border-radius: 8px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Capabilities</h1>
+        <ul>
+            <li>Quantum explanations - simplified complex concepts</li>
+            <li>AI coding assistance - help with algorithms and code</li>
+            <li>Data analysis - insights from patterns and trends</li>
+            <li>Problem solving - logical solutions to complex issues</li>
+            <li>Creative ideation - innovative ideas sparked</li>
+            <li>Conversation - discuss anything, from sci-fi to daily life</li>
+        </ul>
+        <p>What would you like me to help with?</p>
+        <div class="input-container">
+            <input type="text" id="userInput" placeholder="Ask me something...">
+            <button onclick="handleInput()">Submit</button>
+        </div>
+        <div id="response" class="response"></div>
+    </div>
+
+    <script>
+        function handleInput() {
+            const input = document.getElementById('userInput').value.trim();
+            const responseDiv = document.getElementById('response');
+            if (input === "") {
+                responseDiv.textContent = "Please enter a valid question or request.";
+                responseDiv.style.display = 'block';
+                return;
+            }
+
+            // Simulate a response based on the input
+            let responseText = `You asked: "${input}". Here's an example response tailored to your input.`;
+
+            // Customize responses for specific inputs
+            if (input.toLowerCase().includes("quantum")) {
+                responseText = "Quantum mechanics is fascinating. It explores phenomena at microscopic scales where particles behave both as waves and particles!";
+            } else if (input.toLowerCase().includes("code")) {
+                responseText = "Here's a simple example of JavaScript code: console.log('Hello, World!');";
+            } else if (input.toLowerCase().includes("data")) {
+                responseText = "Data analysis involves extracting meaningful insights from raw data using statistical methods and visualization tools.";
+            } else if (input.toLowerCase().includes("problem")) {
+                responseText = "To solve problems effectively, break them into smaller parts and tackle each one step by step.";
+            } else if (input.toLowerCase().includes("creative")) {
+                responseText = "Creativity thrives when you explore new perspectives. Try brainstorming without judging your ideas initially!";
+            } else if (input.toLowerCase().includes("conversation")) {
+                responseText = "I'm here to chat about anything—science fiction, philosophy, technology, or even your daily routine!";
+            }
+
+            responseDiv.textContent = responseText;
+            responseDiv.style.display = 'block';
+
+            // Clear input field
+            document.getElementById('userInput').value = "";
+        }
+    </script>
+</body>
+</html>
+```
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenManus Summary</title>
     <style>
         body {
