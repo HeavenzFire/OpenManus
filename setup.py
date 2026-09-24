@@ -43,7 +43,7 @@ setup(
     python_requires=">=3.12",
     entry_points={
         "console_scripts": [
-            "openmanus=main:main",
+            "openmanus=main:cli_main",
         ],
     },
 )

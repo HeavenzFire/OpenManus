@@ -37,12 +37,16 @@ class ToolCallAgent(ReActAgent):
     async def think(self) -> bool:
         """Process current state and decide next actions using tools"""
         if self.next_step_prompt:
-            user_msg = Message.user_message(self.next_step_prompt)
-            self.messages += [user_msg]
+            # Send the nudge with THIS request only — do not append it to
+            # persistent memory. Adding it every step silently grew the
+            # context (and cost) without adding evidence.
+            messages = self.messages + [Message.user_message(self.next_step_prompt)]
+        else:
+            messages = self.messages
 
         # Get response with tool options
         response = await self.llm.ask_tool(
-            messages=self.messages,
+            messages=messages,
             system_msgs=[Message.system_message(self.system_prompt)]
             if self.system_prompt
             else None,
@@ -174,9 +178,14 @@ class ToolCallAgent(ReActAgent):
             return
 
         if self._should_finish_execution(name=name, result=result, **kwargs):
-            # Set agent state to finished
+            # Set agent state to finished (audited transition; only legal
+            # from RUNNING — a stray finish call can no longer corrupt state)
             logger.info(f"🏁 Special tool '{name}' has completed the task!")
-            self.state = AgentState.FINISHED
+            self.transition_to(
+                AgentState.FINISHED,
+                reason=f"special tool '{name}' signaled completion",
+                detail=str(result)[:500] if result is not None else None,
+            )
 
     @staticmethod
     def _should_finish_execution(**kwargs) -> bool:
