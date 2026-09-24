@@ -1,2 +1,8 @@
-(empty)__pycache__/
-*.pyc
+# Bytecode and build artifacts
+__pycache__/
+*.py[cod]
+logs/
+
+# Editors
+.idea/
+.vscode/

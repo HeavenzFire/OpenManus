@@ -37,6 +37,13 @@ def main() -> int:
         print("\nRESULT: FAIL — root-anchor negative test detected breakage.")
         return rc
 
+    # Unified-field bridge demo: publish protocol records for a healthy and
+    # a tampered ledger; must exit 0 with the expected honest statuses.
+    rc = subprocess.call([sys.executable, "-m", "app.agent.publish"], cwd=ROOT)
+    if rc != 0:
+        print("\nRESULT: FAIL — unified-field bridge publish demo did not pass.")
+        return rc
+
     # Self-check: the durable audit ledger (if present) must verify.
     from app.agent import ledger
 
