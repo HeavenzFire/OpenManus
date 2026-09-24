@@ -19,5 +19,10 @@ async def main():
         logger.warning("Operation interrupted.")
 
 
-if __name__ == "__main__":
+def cli_main():
+    """Synchronous entry point for the `openmanus` console script."""
     asyncio.run(main())
+
+
+if __name__ == "__main__":
+    cli_main()

@@ -1,0 +1,44 @@
+2026-09-24 10:39:52.540 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: IDLE -> RUNNING (reason: test start)
+2026-09-24 10:39:52.544 | WARNING  | app.agent.base:transition_to:159 - ⛔ Rejected illegal state transition for 'dummy': IDLE -> FINISHED (reason: shortcut). Legal targets from IDLE: ['IDLE', 'RUNNING']
+2026-09-24 10:39:52.545 | WARNING  | app.agent.base:transition_to:150 - ⛔ Rejected invalid state transition for 'dummy': 'RUNNING' is not an AgentState (reason: string not enum)
+2026-09-24 10:39:52.548 | ERROR    | app.agent.base:write_audit_event:63 - 🚨 Failed to write audit event to /tmp/pytest-of-root/pytest-21/test_audit_write_failure_block0/logs/agent_audit.jsonl: simulated disk failure
+2026-09-24 10:39:52.551 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: IDLE -> RUNNING (reason: run() started)
+2026-09-24 10:39:52.551 | INFO     | app.agent.base:run:306 - Executing step 1/3
+2026-09-24 10:39:52.551 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: RUNNING -> FINISHED (reason: terminate called)
+2026-09-24 10:39:52.551 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: FINISHED -> IDLE (reason: run() completed successfully)
+2026-09-24 10:39:52.554 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: IDLE -> RUNNING (reason: run() started)
+2026-09-24 10:39:52.554 | INFO     | app.agent.base:run:306 - Executing step 1/2
+2026-09-24 10:39:52.554 | INFO     | app.agent.base:run:306 - Executing step 2/2
+2026-09-24 10:39:52.554 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: RUNNING -> IDLE (reason: max steps (2) reached without a verified finish)
+2026-09-24 10:39:52.557 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: IDLE -> RUNNING (reason: run() started)
+2026-09-24 10:39:52.557 | INFO     | app.agent.base:run:306 - Executing step 1/2
+2026-09-24 10:39:52.557 | INFO     | app.agent.base:run:306 - Executing step 2/2
+2026-09-24 10:39:52.557 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: RUNNING -> IDLE (reason: max steps (2) reached without a verified finish)
+2026-09-24 10:39:52.558 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: IDLE -> RUNNING (reason: run() started)
+2026-09-24 10:39:52.558 | INFO     | app.agent.base:run:306 - Executing step 1/2
+2026-09-24 10:39:52.558 | INFO     | app.agent.base:run:306 - Executing step 2/2
+2026-09-24 10:39:52.558 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: RUNNING -> IDLE (reason: max steps (2) reached without a verified finish)
+2026-09-24 10:39:52.560 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: IDLE -> RUNNING (reason: run() started)
+2026-09-24 10:39:52.560 | INFO     | app.agent.base:run:306 - Executing step 1/3
+2026-09-24 10:39:52.561 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: RUNNING -> ERROR (reason: unhandled exception during run (E-ValueError))
+2026-09-24 10:39:52.561 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: ERROR -> IDLE (reason: recovery reset after ERROR)
+2026-09-24 10:39:52.561 | ERROR    | app.agent.base:run:358 - 🚨 Agent 'dummy' run failed [E-ValueError]: boom
+2026-09-24 10:39:52.562 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: IDLE -> RUNNING (reason: run() started)
+2026-09-24 10:39:52.562 | INFO     | app.agent.base:run:306 - Executing step 1/3
+2026-09-24 10:39:52.562 | INFO     | app.agent.base:run:306 - Executing step 2/3
+2026-09-24 10:39:52.562 | INFO     | app.agent.base:run:306 - Executing step 3/3
+2026-09-24 10:39:52.562 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: RUNNING -> IDLE (reason: max steps (3) reached without a verified finish)
+2026-09-24 10:39:52.567 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: IDLE -> RUNNING (reason: run() started)
+2026-09-24 10:39:52.567 | INFO     | app.agent.base:run:306 - Executing step 1/1
+2026-09-24 10:39:52.567 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: RUNNING -> IDLE (reason: max steps (1) reached without a verified finish)
+2026-09-24 10:39:52.570 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: IDLE -> RUNNING (reason: export test)
+2026-09-24 10:39:52.572 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: IDLE -> RUNNING (reason: start)
+2026-09-24 10:39:52.572 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: RUNNING -> FINISHED (reason: done)
+2026-09-24 10:39:52.574 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: IDLE -> RUNNING (reason: start)
+2026-09-24 10:39:52.574 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: RUNNING -> FINISHED (reason: done)
+2026-09-24 10:39:52.576 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: IDLE -> RUNNING (reason: start)
+2026-09-24 10:39:52.578 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: IDLE -> RUNNING (reason: run() started)
+2026-09-24 10:39:52.578 | INFO     | app.agent.base:run:306 - Executing step 1/3
+2026-09-24 10:39:52.579 | INFO     | app.agent.base:run:306 - Executing step 2/3
+2026-09-24 10:39:52.579 | INFO     | app.agent.base:run:306 - Executing step 3/3
+2026-09-24 10:39:52.579 | INFO     | app.agent.base:transition_to:178 - 📝 [dummy] state: RUNNING -> IDLE (reason: max steps (3) reached without a verified finish)

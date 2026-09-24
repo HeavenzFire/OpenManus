@@ -1,0 +1,33 @@
+2026-09-24 10:25:12.039 | INFO     | app.agent.base:transition_to:165 - 📝 [dummy] state: IDLE -> RUNNING (reason: test start)
+2026-09-24 10:25:12.042 | WARNING  | app.agent.base:transition_to:146 - ⛔ Rejected illegal state transition for 'dummy': IDLE -> FINISHED (reason: shortcut). Legal targets from IDLE: ['IDLE', 'RUNNING']
+2026-09-24 10:25:12.043 | WARNING  | app.agent.base:transition_to:137 - ⛔ Rejected invalid state transition for 'dummy': 'RUNNING' is not an AgentState (reason: string not enum)
+2026-09-24 10:25:12.048 | INFO     | app.agent.base:transition_to:165 - 📝 [dummy] state: IDLE -> RUNNING (reason: run() started)
+2026-09-24 10:25:12.048 | INFO     | app.agent.base:run:270 - Executing step 1/3
+2026-09-24 10:25:12.048 | INFO     | app.agent.base:transition_to:165 - 📝 [dummy] state: RUNNING -> FINISHED (reason: terminate called)
+2026-09-24 10:25:12.049 | INFO     | app.agent.base:transition_to:165 - 📝 [dummy] state: FINISHED -> IDLE (reason: run() completed successfully)
+2026-09-24 10:25:12.051 | INFO     | app.agent.base:transition_to:165 - 📝 [dummy] state: IDLE -> RUNNING (reason: run() started)
+2026-09-24 10:25:12.051 | INFO     | app.agent.base:run:270 - Executing step 1/2
+2026-09-24 10:25:12.051 | INFO     | app.agent.base:run:270 - Executing step 2/2
+2026-09-24 10:25:12.051 | INFO     | app.agent.base:transition_to:165 - 📝 [dummy] state: RUNNING -> IDLE (reason: max steps (2) reached without a verified finish)
+2026-09-24 10:25:12.053 | INFO     | app.agent.base:transition_to:165 - 📝 [dummy] state: IDLE -> RUNNING (reason: run() started)
+2026-09-24 10:25:12.054 | INFO     | app.agent.base:run:270 - Executing step 1/2
+2026-09-24 10:25:12.054 | INFO     | app.agent.base:run:270 - Executing step 2/2
+2026-09-24 10:25:12.054 | INFO     | app.agent.base:transition_to:165 - 📝 [dummy] state: RUNNING -> IDLE (reason: max steps (2) reached without a verified finish)
+2026-09-24 10:25:12.054 | INFO     | app.agent.base:transition_to:165 - 📝 [dummy] state: IDLE -> RUNNING (reason: run() started)
+2026-09-24 10:25:12.054 | INFO     | app.agent.base:run:270 - Executing step 1/2
+2026-09-24 10:25:12.054 | INFO     | app.agent.base:run:270 - Executing step 2/2
+2026-09-24 10:25:12.054 | INFO     | app.agent.base:transition_to:165 - 📝 [dummy] state: RUNNING -> IDLE (reason: max steps (2) reached without a verified finish)
+2026-09-24 10:25:12.056 | INFO     | app.agent.base:transition_to:165 - 📝 [dummy] state: IDLE -> RUNNING (reason: run() started)
+2026-09-24 10:25:12.056 | INFO     | app.agent.base:run:270 - Executing step 1/3
+2026-09-24 10:25:12.056 | INFO     | app.agent.base:transition_to:165 - 📝 [dummy] state: RUNNING -> ERROR (reason: unhandled exception during run (E-ValueError))
+2026-09-24 10:25:12.057 | INFO     | app.agent.base:transition_to:165 - 📝 [dummy] state: ERROR -> IDLE (reason: recovery reset after ERROR)
+2026-09-24 10:25:12.057 | ERROR    | app.agent.base:run:322 - 🚨 Agent 'dummy' run failed [E-ValueError]: boom
+2026-09-24 10:25:12.057 | INFO     | app.agent.base:transition_to:165 - 📝 [dummy] state: IDLE -> RUNNING (reason: run() started)
+2026-09-24 10:25:12.057 | INFO     | app.agent.base:run:270 - Executing step 1/3
+2026-09-24 10:25:12.057 | INFO     | app.agent.base:run:270 - Executing step 2/3
+2026-09-24 10:25:12.057 | INFO     | app.agent.base:run:270 - Executing step 3/3
+2026-09-24 10:25:12.057 | INFO     | app.agent.base:transition_to:165 - 📝 [dummy] state: RUNNING -> IDLE (reason: max steps (3) reached without a verified finish)
+2026-09-24 10:25:12.066 | INFO     | app.agent.base:transition_to:165 - 📝 [dummy] state: IDLE -> RUNNING (reason: run() started)
+2026-09-24 10:25:12.066 | INFO     | app.agent.base:run:270 - Executing step 1/1
+2026-09-24 10:25:12.066 | INFO     | app.agent.base:transition_to:165 - 📝 [dummy] state: RUNNING -> IDLE (reason: max steps (1) reached without a verified finish)
+2026-09-24 10:25:12.069 | INFO     | app.agent.base:transition_to:165 - 📝 [dummy] state: IDLE -> RUNNING (reason: export test)
